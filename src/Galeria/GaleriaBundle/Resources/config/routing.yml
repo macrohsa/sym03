@@ -1,0 +1,27 @@
+galeria_galeria_homepage:
+    pattern:  /hello
+    defaults: { _controller: GaleriaGaleriaBundle:Default:index }
+    
+galeria_sitio:
+    pattern:  /gal
+    defaults: { _controller: GaleriaGaleriaBundle:Default:homeGaleria }
+    
+nueva_galeria:
+    pattern:  /nuevagal
+    defaults: { _controller: GaleriaGaleriaBundle:Default:altaGaleria }
+    
+elimina_galeria:
+    pattern:  /elimgal
+    defaults: { _controller: GaleriaGaleriaBundle:Default:eliminarGaleria }
+    
+elimina_fotos_galeria:
+    pattern:  /bajafotgal
+    defaults: { _controller: GaleriaGaleriaBundle:Default:eliminarFotosGaleria }
+    
+mostrar_galeria:
+    pattern:  /mostrargal
+    defaults: { _controller: GaleriaGaleriaBundle:Default:mostrarGaleria }
+    
+baja_galeria:
+    pattern:  /bajagal
+    defaults: { _controller: GaleriaGaleriaBundle:Default:bajaGaleria }   

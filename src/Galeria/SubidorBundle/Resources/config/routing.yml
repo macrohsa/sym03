@@ -1,0 +1,8 @@
+galeria_subidor_homepage:
+    pattern:  /hello
+    defaults: { _controller: GaleriaSubidorBundle:Default:index }
+    
+galeria_subidor_sitio:
+    pattern:  /sitio
+    defaults: { _controller: GaleriaSubidorBundle:Default:subir }
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+       <script type="text/javascript" src="{{ asset('bundles/galeriagaleria/lightbox/js/jquery-1.10.2.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('bundles/galeriagaleria/lightbox/js/lightbox-2.6.min.js') }}"></script>
+          
+        <link href="{{ asset('bundles/galeriagaleria/lightbox/css/lightbox.css') }}" rel="stylesheet" type="text/css" />
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Galerías</title>
+
+    </head>
+    <body bgcolor="#FFFFCC">
+        
+      <br><br>
+        <form action="{{ path('mostrar_galeria') }}" method="POST" {{ form_enctype(form) }}>
+
+                <p>Seleccione galería a mostrar</p>
+            
+            <select name="gale" id="gale" >
+                
+                 {% for galeria in galerias %}
+                    <option value="{{galeria.id}}">{{galeria.nombre}}</option>
+                 {% endfor %}
+
+            </select>
+
+            <br><br>
+            <input type="submit" value="Ir a la galeria">
+
+      
+
+        </form>
+    </body>
+</html>
+
+

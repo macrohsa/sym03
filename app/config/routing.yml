@@ -1,0 +1,12 @@
+galeria_subidor2:
+    resource: "@GaleriaSubidor2Bundle/Resources/config/routing.yml"
+    prefix:   /
+
+galeria_subidor:
+    resource: "@GaleriaSubidorBundle/Resources/config/routing.yml"
+    prefix:   /subidor
+
+galeria_galeria:
+    resource: "@GaleriaGaleriaBundle/Resources/config/routing.yml"
+    prefix:   /galeria
+

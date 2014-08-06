@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>TODO supply a title</title>
+    </head>
+    <body>
+       <?php
+$max_upload = (int)(ini_get('upload_max_filesize'));
+$max_post = (int)(ini_get('post_max_size'));
+$memory_limit = (int)(ini_get('memory_limit'));
+$upload_mb = min($max_upload, $max_post, $memory_limit);
+
+echo "Tamaño maximo permitido <strong>$upload_mb Mb</strong><br>";
+?>
+        <!-- El tipo de codificación de datos, enctype, se DEBE especificar como a continuación -->
+<form enctype="multipart/form-data" action="newEmptyPHP.php" method="POST">
+    <!-- MAX_FILE_SIZE debe preceder el campo de entrada de archivo -->
+    <input type="hidden" name="MAX_FILE_SIZE" value="3000000" />
+    <!-- El nombre del elemento de entrada determina el nombre en el array $_FILES -->
+    Enviar este archivo: <input name="archivo[]" type="file" />
+    <input type="submit" value="Send File" />
+</form>
+    </body>
+</html>
